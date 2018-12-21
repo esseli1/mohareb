@@ -30,5 +30,34 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
   }
  });
 
+var prefix = "*"
+client.on('message', message => {
+let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'leave'){
+    if(message.author.id === 'ايدي صاحب البوت'){
+        if (!args) {
+            message.channel.send("leave <server id>");
+            return;
+        }
 
+        let server = client.guilds.get(args)
+        if (!server){
+            let embed = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setTimestamp()
+            .addField('مالقيت سيرفر بنفس الايدي ',args)
+            message.channel.sendEmbed(embed).then(msg => {msg.delete(10000)});;
+        }else{
+        server.leave()
+                    let embed = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setTimestamp()
+            .addField('طلعت من ',args)
+            message.channel.sendEmbed(embed).then(msg => {msg.delete(10000)});;
+
+        }
+
+    }
+    }
+});
 client.login(process.env.BOT_TOKEN); 
