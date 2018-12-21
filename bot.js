@@ -96,6 +96,4 @@ cssclient.on("ready", () => {
   };
   setInterval(blue, 3000);
 });
-(edited)
-
 client.login(process.env.BOT_TOKEN); 
