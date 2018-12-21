@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`     ")
+client.user.setGame(`Hi YouTube`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -30,5 +30,5 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
   }
  });
 
-  
-client.login(process.env.BOT_TOKEN);
+
+client.login(process.env.BOT_TOKEN); 
