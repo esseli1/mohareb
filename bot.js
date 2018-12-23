@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 
 const Util = require('discord.js');
 
@@ -20,13 +20,13 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "your prefix here";
+const prefix = "4";
 /////////////////////////
 ////////////////////////
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
+    if (!msg.content.startsWith(1)) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -349,7 +349,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : CF Na World Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Toxic Codes Team`,"http://twitch.tv/Toxic Codes")
+client.user.setGame(`4play`,"https://www.twitch.tv/esseli00")
 client.user.setStatus("dnd")
 });
 
